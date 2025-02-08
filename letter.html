@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=10" />
+    <title><3Letter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      body,
+      html {
+        width: 100%;
+        height: 100%;
+        font-family: 'Poor Story', system-ui;
+        font-weight: 700;
+        color: #ff6;
+        background-color: #000;
+        overflow: hidden;
+      }
+
+      p#start {
+        position: relative;
+        width: 16em;
+        font-size: 100%;
+        font-weight: 400;
+        margin: 20% auto;
+        color: #4ee;
+        opacity: 0;
+        z-index: 1;
+        -webkit-animation: intro 2s ease-out;
+        -moz-animation: intro 2s ease-out;
+        -ms-animation: intro 2s ease-out;
+        -o-animation: intro 2s ease-out;
+        animation: intro 2s ease-out;
+      }
+
+      @-webkit-keyframes intro {
+        0% {
+          opacity: 1;
+        }
+        90% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      @-moz-keyframes intro {
+        0% {
+          opacity: 1;
+        }
+        90% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      @-ms-keyframes intro {
+        0% {
+          opacity: 1;
+        }
+        90% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      @-o-keyframes intro {
+        0% {
+          opacity: 1;
+        }
+        90% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      @keyframes intro {
+        0% {
+          opacity: 1;
+        }
+        90% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      h1 {
+        position: absolute;
+        width: 2.6em;
+        left: 50%;
+        top: 25%;
+        font-size: 10em;
+        text-align: center;
+        margin-left: -1.3em;
+        line-height: 0.8em;
+        letter-spacing: -0.05em;
+        color: #000;
+        text-shadow: -2px -2px 0 #ff6, 2px -2px 0 #ff6, -2px 2px 0 #ff6,
+          2px 2px 0 #ff6;
+        opacity: 0;
+        z-index: 1;
+        -webkit-animation: logo 5s ease-out 2.5s;
+        -moz-animation: logo 5s ease-out 2.5s;
+        -ms-animation: logo 5s ease-out 2.5s;
+        -o-animation: logo 5s ease-out 2.5s;
+        animation: logo 5s ease-out 2.5s;
+      }
+
+      h1 sub {
+        display: block;
+        font-size: 0.3em;
+        letter-spacing: 0;
+        line-height: 0.8em;
+      }
+
+      @-webkit-keyframes logo {
+        0% {
+          -webkit-transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          -webkit-transform: scale(0.1);
+          opacity: 0;
+        }
+      }
+
+      @-moz-keyframes logo {
+        0% {
+          -moz-transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          -moz-transform: scale(0.1);
+          opacity: 0;
+        }
+      }
+
+      @-ms-keyframes logo {
+        0% {
+          -ms-transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          -ms-transform: scale(0.1);
+          opacity: 0;
+        }
+      }
+
+      @-o-keyframes logo {
+        0% {
+          -o-transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          -o-transform: scale(0.1);
+          opacity: 0;
+        }
+      }
+
+      @keyframes logo {
+        0% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          transform: scale(0.1);
+          opacity: 0;
+        }
+      }
+
+      /* the interesting 3D scrolling stuff */
+      #titles {
+        position: absolute;
+        width: 18em;
+        height: 50em;
+        bottom: 0;
+        left: 50%;
+        margin-left: -9em;
+        font-size: 150%;
+        text-align: justify;
+        overflow: hidden;
+        -webkit-transform-origin: 50% 100%;
+        -moz-transform-origin: 50% 100%;
+        -ms-transform-origin: 50% 100%;
+        -o-transform-origin: 50% 100%;
+        transform-origin: 50% 100%;
+        -webkit-transform: perspective(300px) rotateX(25deg);
+        -moz-transform: perspective(300px) rotateX(25deg);
+        -ms-transform: perspective(300px) rotateX(25deg);
+        -o-transform: perspective(300px) rotateX(25deg);
+        transform: perspective(300px) rotateX(25deg);
+      }
+
+      #titles:after {
+        position: absolute;
+        content: " ";
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 60%;
+        background-image: -webkit-linear-gradient(
+          top,
+          rgba(0, 0, 0, 1) 0%,
+          transparent 100%
+        );
+        background-image: -moz-linear-gradient(
+          top,
+          rgba(0, 0, 0, 1) 0%,
+          transparent 100%
+        );
+        background-image: -ms-linear-gradient(
+          top,
+          rgba(0, 0, 0, 1) 0%,
+          transparent 100%
+        );
+        background-image: -o-linear-gradient(
+          top,
+          rgba(0, 0, 0, 1) 0%,
+          transparent 100%
+        );
+        background-image: linear-gradient(
+          top,
+          rgba(0, 0, 0, 1) 0%,
+          transparent 100%
+        );
+        pointer-events: none;
+      }
+
+      #titles p {
+        text-align: justify;
+        margin: 0.8em 0;
+      }
+
+      #titles p.center {
+        text-align: center;
+      }
+
+      #titles a {
+        color: #ff6;
+        text-decoration: underline;
+        background-color: purple;
+        color :white;
+
+      }
+
+      #titlecontent {
+        position: absolute;
+        top: 100%;
+        -webkit-animation: scroll 100s linear 4s infinite;
+        -moz-animation: scroll 100s linear 4s infinite;
+        -ms-animation: scroll 100s linear 4s infinite;
+        -o-animation: scroll 100s linear 4s infinite;
+        animation: scroll 100s linear 4s infinite;
+      }
+
+      /* animation */
+      @-webkit-keyframes scroll {
+        0% {
+          top: 100%;
+        }
+        100% {
+          top: -170%;
+        }
+      }
+
+      @-moz-keyframes scroll {
+        0% {
+          top: 100%;
+        }
+        100% {
+          top: -170%;
+        }
+      }
+
+      @-ms-keyframes scroll {
+        0% {
+          top: 100%;
+        }
+        100% {
+          top: -170%;
+        }
+      }
+
+      @-o-keyframes scroll {
+        0% {
+          top: 100%;
+        }
+        100% {
+          top: -170%;
+        }
+      }
+
+      @keyframes scroll {
+        0% {
+          top: 100%;
+        }
+        100% {
+          top: -170%;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="text-xl md:text-3xl">
+    <p id="start">Hace 3 años nos conocimos y ahora...&hellip;</p>
+
+    <h1>5 Mayo 2022</h1>
+
+    <div id="titles">
+      <div id="titlecontent">
+        <p class="center">
+          Mi Querida,<br />
+          MARGIORIE
+        </p>
+
+        <p>Déjame reunir el valor para decirte esto frente a ti </p>
+
+        <p>
+          Mientras me siento a escribir esta carta, estoy lleno de emoción y nervios, pero sobre todo, de amor por ti.
+        </p>
+
+        <p>
+          Desde el momento en que nos conocimos, tu forma de ser y tu encanto capturaron mi corazón. Tu risa es contagiosa, y tu amabilidad parece que no tiene límites.
+        </p>
+
+        <p>
+          Pero lo que realmente te hace especial es tu capacidad para encontrar alegría en cada momento, incluso en las cosas más simples. Eres única, y eso es una de las razones por las que me encantas.
+        </p>
+
+        <p>
+          Más allá de tu apariencia, es tu belleza interior lo que realmente te distingue. Tu bondad, tu compasión y tu fuerza inquebrantable me inspiran cada día. Tienes un corazón de oro, y eso se nota en cómo cuidas a quienes te rodean.
+        </p>
+
+        <p>
+          Hay algo en ti que ilumina mis días de una manera que pocas cosas en este mundo pueden hacerlo. Es esa risa espontánea, esa chispa en tus ojos cuando encuentras alegría en lo más simple, cuando conviertes lo cotidiano en algo especial. Y es en esos momentos, cuando te veo ser auténticamente tú, sin miedo, sin reservas, que me doy cuenta de cuánto significas para mí. Porque no es solo lo que haces, es lo que eres. Y eres alguien a quien no podría dejar de adorar, ni aunque lo intentara.
+        </p>
+
+        <p>
+          En ti, he encontrado no solo a una mujer que quiero como compañera de vida, sino también a una mejor amiga, alguien con quien puedo compartir mis pensamientos más profundos, mis miedos y mis sueños. Me aceptas tal como soy, con mis defectos y todo, y por eso te estoy eternamente agradecido.
+        </p>
+
+        <p>
+          Así que, Margiorie, hoy pongo mi corazón en tus manos y te pregunto: ¿harías el increíble honor de ser mi compañera en la vida? Juntos, sé que podemos superar cualquier desafío y crear una vida llena de recuerdos hermosos.
+        </p>
+
+        <p class="center">Entonces...</p>
+
+        <p>
+          Por favor, tómate tu tiempo para considerar mi propuesta, y recuerda que, sin importar cuál sea tu decisión, siempre atesoraré los momentos que hemos compartido y te llevaré en mi corazón.
+        </p>
+
+        <p>
+          Con todo mi amor y admiración,
+        </p>
+
+        <p>Tu querido, Diego (yo)</p>
+        <p class="center">
+          <a
+            href="choice.html"
+            class="mt-4 bg-gray-900 text-white hover:bg-gray-700 rounded-xl w-fit p-3 bg-opacity-60"
+            >¿Seguimos?</a
+          >
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
